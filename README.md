@@ -1,28 +1,25 @@
-# Solus Styling
+# Solus Hugo Theme
 
-Unified styling for Solus Web Platform. Currently consists of just website-related bits, will be refactored and expanded as time goes on.
+A Hugo theme for the Solus main site
 
 ## Development
 
 ### Dependencies
 
-To get started on SASS development, run `make setup`
+To get started on development, run `make setup`
 
 ### Compile
 
 - All the things: `make`
 - Fonts: `make font`
-- SASS: `make sass`
- - Site only: `make site`
 
 ### Syncing with Solbit
 
-Solus Styling leverages Solbit to reduce redundancy the multitude of Solus Project brand assets. To ensure Solus Styling remains in sync with Solbit, use `make sync`. Changes in Solbit are compiled into 
-the respective stylesheets for the Site and Solhub.
+`solus-hugo-theme` leverages `solbit` to reduce redundancy of Solus Project brand assets. To ensure this theme stays in sync with Solbit, use `make font`. This will update the git commit for solbit and put the fonts in the right directory for Hugo. You will need to rebuild the website for the font and SASS changes to go into effect.
 
-## Styling
+### Styling
 
-I use 4-char wide tabs, not spaces, in everything **except** the YAML files. Yes I'm a horrible human being.
+I use 4-char wide tabs, not spaces, in everything **except** the YAML files, which use 4 spaces for a tab. Sorry!
 
 ## Licensing
 
