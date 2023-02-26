@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main>
+    <div class="content blog">
+        <div class="narrow">
+        	{{ partial "blog/info.html" (dict "blog" . "site" .Site "isfeatured" "no") }}
+    		{{ if and (isset .Params "featuredimage") (ne .Params.featuredimage "") }}
+    			{{ partial "altimg.html" (dict "image" .Params.featuredimage "class" "featured-image" "dir" .Params.url )}}
+    		{{ end }}
+    		{{ .Content }}
+        </div>
+    </div>
+</main>
+{{ end }}

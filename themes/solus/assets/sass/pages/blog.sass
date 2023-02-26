@@ -1,0 +1,61 @@
+// Blog View and Individual Blogs
+
+.blog
+	h2
+		@include box($blog-head-box)
+		border-bottom: $blog-head-border-width solid $blog-heading-color
+
+	.info
+		@include box($blog-info-box)
+
+	.meta
+		@include column()
+		gap: $blog-meta-gap
+		@include fullWidth()
+		@include box($blog-meta-box)
+
+		section
+			@include row()
+			@include fullWidth()
+		.menu
+			nav
+				gap: $blog-nav-gap
+
+	&.list
+		@include column()
+		gap: $blog-list-gap
+
+		.info
+			@include box($blog-list-info-box)
+			@include colors($blog-list-swatch)
+
+			h1
+				@include box($blog-list-head-box)
+				text-align: left
+
+.panel
+	&.blog
+		@include box($blog-panel-box)
+		@include panel-colors($blog-panel-swatch)
+
+		> section
+			@include box($blog-panel-section-box)
+
+			p
+				@include fullWidth()
+
+		h1 a, span
+			color: fg($blog-panel-swatch)
+
+		.info
+			section
+				@include row()
+
+		img
+			@include box($blog-panel-img-box)
+
+		.tag
+			@include button-colors($blog-panel-tag-swatch)
+
+		@media screen and #{$mobile}
+			@include box($blog-panel-box-mobile)

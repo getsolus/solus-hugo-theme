@@ -1,0 +1,6 @@
+[submodule "solbit"]
+	path = themes/solus/assests/sass/solbit
+	url = https://github.com/getsolus/solbit.git
+[submodule "themes/solus/assests/sass/solbit"]
+	path = themes/solus/assests/sass/solbit
+	url = https://github.com/getsolus/solbit.git
