@@ -1,0 +1,25 @@
+// Content
+.content
+	@include fullWidth()
+	flex-grow: 1
+
+	h1, h2, h3
+		@include box($heading-top-box)
+		color: $link
+
+	h1, h2, h3, h4, h5, h6
+		@include box($heading-box)
+
+	h1:first-of-type
+		@include box($heading-first-box)
+		text-align: center
+
+	p
+		@include box($paragraph-box)
+
+	img
+		display: block
+		@include box($content-img-box)
+
+		&.featured
+			@include box($content-img-featured-box)

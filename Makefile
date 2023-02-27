@@ -1,13 +1,16 @@
+SOLBIT = https://github.com/getsolus/solbit.git
+SASS = themes/solus/assets/sass/solbit
+CSS = themes/solus/static/css
+
 setup:
-	git submodule init
 	sudo eopkg install hugo sassc
 
 sync:
-	git submodule update --remote --rebase
-
-font: sync
-	cp -R themes/solus/assets/sass/solbit/build/fonts/*.{css,eot,svg,ttf,woff,woff2} themes/solus/static/css/fonts/
+	rm -rf $(SASS)
+	git clone $(SOLBIT) $(SASS)
+	rm -rf $(SASS)/.git
+	cp -R $(SASS)/build/fonts/*.{css,eot,svg,ttf,woff,woff2} $(CSS)/fonts/
 
 .DEFAULT_GOAL := all
 .PHONY : all
-all: font
+all: sync
