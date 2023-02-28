@@ -1,5 +1,5 @@
 fosstodon:
-  fmt: "https://fostodon.org/%s"
+  fmt: "https://fosstodon.org/%s"
   icon: mastodon
 github:
   fmt: "https://github.com/%s"
@@ -8,10 +8,10 @@ irc:
   fmt: "irc://libera.chat/%s,isuser"
   icon: irc
 mastodon:
-  fmt: "https://fostodon.org/%s"
+  fmt: "https://fosstodon.org/%s"
   icon: mastodon
 reddit:
-  fmt: "https://reddit.com/u/%s"
+  fmt: "https://www.reddit.com/user/%s"
   icon: reddit
 twitter:
   fmt: "https://twitter.com/%s"
